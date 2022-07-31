@@ -1,0 +1,114 @@
+.container {
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 67px;
+    margin-bottom: 60px;
+  }
+}
+
+.containerImage {
+  
+}
+
+.imageLink {
+  width: 68%;
+}
+
+.image {
+  width: 231.09px;
+  height: 164px;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1A1A1A;
+}
+
+.subTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1A1A1A;
+}
+
+.countdown {
+  gap: 8px;
+  margin-bottom: 4px
+}
+
+.containerTicks {
+  width: 64px;
+  height: 52px;
+  background: #F0F0F0;
+  border-radius: 4px;
+}
+
+.tick {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #333333;
+  margin: 0;
+}
+
+.containerSubtitles {
+  gap: 31px;
+}
+
+.tickSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #505050;
+  margin: 0;
+}
+
+.containerButton {
+  width: 177px;
+  height: 47px;
+  background: #FF9401;
+  border-radius: 24px;
+  transition: background-color .5s; 
+  margin: auto;
+}
+
+.containerButton:hover {
+  background: #FFFFFF;
+  border: 1px solid #FF9401;
+  transition: background-color .5s; 
+}
+
+.containerButton:hover .buttonText {
+  color: #FF9401;
+}
+
+.buttonLink {
+  text-decoration: none;
+  width: 177px;
+  padding: 0px 48px;
+}
+
+.buttonText {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
+  width: max-content;
+}

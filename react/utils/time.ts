@@ -47,10 +47,31 @@ export const tick = (
   }, ONE_SECOND_IN_MILLIS)
 }
 
-export const getTwoDaysFromNow = () => {
+export const getOneDaysFromNow = () => {
   const today = new Date()
 
-  today.setDate(today.getDate() + 2)
+  today.setDate(today.getDate() + 1)
 
   return today.toISOString()
+}
+
+export const getYearFromNow = () => {
+  const year = new Date()
+  const yearNow = year.getFullYear().toString()
+
+  return yearNow
+}
+
+export const getMonthFromNow = () => {
+  const month = new Date()
+  const monthNow = (month.getMonth() + 1).toString().padStart(2, '0')
+
+  return monthNow
+}
+
+export const getDayFromNow = () => {
+  const day = new Date()
+  const dayNow = day.getDate().toString().padStart(2, '0')
+
+  return dayNow
 }
