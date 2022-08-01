@@ -7,6 +7,7 @@ import Styles from './styles.css'
 
 interface CountdownProps {
   title: string
+  name: string
   subTitle: string
   textButton: string
   linkButton: string
@@ -24,6 +25,7 @@ const CSS_HANDLES = ['container', 'countdown', 'title', 'ticks']
 
 const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
   title,
+  name,
   subTitle,
   textButton,
   linkButton,
@@ -47,36 +49,38 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
   tick(targetDate, setTime)
 
   return (
-    <div className={`${handles.container} t-heading-2 fw3 w-100 c-muted-1`}>
-      <div className={`${Styles.containerImage} flex tc justify-center mb6`}>
-        <a href={linkImg} className={`${Styles.imageLink}`}>
+    <div className={`${handles.container} ${handles.container}--${name} t-heading-2 fw3 w-100 c-muted-1`}>
+      <div className={`${Styles.containerImage} ${handles.container}--${name} flex tc justify-center mb6`}>
+        <a href={linkImg} className={`${Styles.imageLink} ${handles.container}--${name}`}>
           <img
             src={image}
-            className={`${Styles.image}`}
+            className={`${Styles.image} ${handles.container}--${name}`}
           />
         </a>
       </div>
-      <p className={`${Styles.title} tc mb2 mt0`}>{titleText}</p>
-      <p className={`${Styles.subTitle} tc mb6 mt0`}>{subTitle}</p>
-      <div className={`${handles.countdown} flex tc justify-center`}>
-        <div className={`${Styles.containerTicks} flex justify-center items-center`}>
-          <p className={`${Styles.tick}`}>{timeRemaining.hours}</p>
+      <div className={`${Styles.containerText} ${handles.container}--${name} tc justify-center mb6`}>
+        <p className={`${Styles.title} ${handles.container}--${name} tc mb2 mt0`}>{titleText}</p>
+        <p className={`${Styles.subTitle} ${handles.container}--${name} tc mb6 mt0`}>{subTitle}</p>
+      </div>
+      <div className={`${handles.countdown} ${handles.container}--${name} flex tc justify-center`}>
+        <div className={`${Styles.containerTicks} ${handles.container}--${name} flex justify-center items-center`}>
+          <p className={`${Styles.tick} ${handles.container}--${name}`}>{timeRemaining.hours}</p>
         </div>
-        <div className={`${Styles.containerTicks} flex justify-center items-center`}>
-          <p className={`${Styles.tick}`}>{timeRemaining.minutes}</p>
+        <div className={`${Styles.containerTicks} ${handles.container}--${name} flex justify-center items-center`}>
+          <p className={`${Styles.tick} ${handles.container}--${name}`}>{timeRemaining.minutes}</p>
         </div>
-        <div className={`${Styles.containerTicks} flex justify-center items-center`}>
-          <p className={`${Styles.tick}`}>{timeRemaining.seconds}</p>
+        <div className={`${Styles.containerTicks} ${handles.container}--${name} flex justify-center items-center`}>
+          <p className={`${Styles.tick} ${handles.container}--${name}`}>{timeRemaining.seconds}</p>
         </div>
       </div>
-      <div className={`${Styles.containerSubtitles} flex tc justify-center mb7`}>
-        <p className={`${Styles.tickSubtitle}`}>{textHours}</p>
-        <p className={`${Styles.tickSubtitle}`}>{textMinutes}</p>
-        <p className={`${Styles.tickSubtitle}`}>{textSeconds}</p>
+      <div className={`${Styles.containerSubtitles} ${handles.container}--${name} flex tc justify-center mb7`}>
+        <p className={`${Styles.tickSubtitle} ${handles.container}--${name}`}>{textHours}</p>
+        <p className={`${Styles.tickSubtitle} ${handles.container}--${name}`}>{textMinutes}</p>
+        <p className={`${Styles.tickSubtitle} ${handles.container}--${name}`}>{textSeconds}</p>
       </div>
-      <div className={`${Styles.containerButton} m-auto flex justify-center items-center`}>
-        <a href={linkButton} className={`${Styles.buttonLink}`}>
-          <p className={`${Styles.buttonText}`}>{textButton}</p>
+      <div className={`${Styles.containerButton} ${handles.container}--${name} m-auto flex justify-center items-center`}>
+        <a href={linkButton} className={`${Styles.buttonLink} ${handles.container}--${name}`}>
+          <p className={`${Styles.buttonText} ${handles.container}--${name}`}>{textButton}</p>
         </a>
       </div>
     </div>
@@ -148,6 +152,7 @@ Countdown.schema = {
 
 Countdown.defaultProps = {
   title: 'Aprovecha los super descuentos',
+  name: 'countdown',
   subTitle: 'antes que se acabe el tiempo',
   textButton: 'Ver todo',
   linkButton: '/',

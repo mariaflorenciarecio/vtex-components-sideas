@@ -1,5 +1,6 @@
 .container {
   align-self: center;
+  width: 363px !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -14,12 +15,16 @@
 }
 
 .imageLink {
-  width: 68%;
+  width: 100%;
 }
 
 .image {
   width: 231.09px;
   height: 164px;
+}
+
+.containerText {
+
 }
 
 .title {
