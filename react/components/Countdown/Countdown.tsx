@@ -21,7 +21,7 @@ interface CountdownProps {
 }
 
 const DEFAULT_TARGET_DATE = getOneDaysFromNow()
-const CSS_HANDLES = ['container', 'countdown', 'title', 'ticks']
+const CSS_HANDLES = ['container', 'countdown']
 
 const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
   title,
@@ -50,37 +50,37 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({
 
   return (
     <div className={`${handles.container} ${handles.container}--${name} t-heading-2 fw3 w-100 c-muted-1`}>
-      <div className={`${Styles.containerImage} ${handles.container}--${name} flex tc justify-center mb6`}>
-        <a href={linkImg} className={`${Styles.imageLink} ${handles.container}--${name}`}>
+      <div className={`${Styles.containerImage} ${Styles.containerImage}--${name} flex tc justify-center mb6`}>
+        <a href={linkImg} className={`${Styles.imageLink} ${Styles.imageLink}--${name}`}>
           <img
             src={image}
-            className={`${Styles.image} ${handles.container}--${name}`}
+            className={`${Styles.image} ${Styles.image}--${name}`}
           />
         </a>
       </div>
-      <div className={`${Styles.containerText} ${handles.container}--${name} tc justify-center mb6`}>
-        <p className={`${Styles.title} ${handles.container}--${name} tc mb2 mt0`}>{titleText}</p>
-        <p className={`${Styles.subTitle} ${handles.container}--${name} tc mb6 mt0`}>{subTitle}</p>
+      <div className={`${Styles.containerText} ${Styles.containerText}--${name} tc justify-center mb6`}>
+        <p className={`${Styles.title} ${Styles.title}--${name} tc mb2 mt0`}>{titleText}</p>
+        <p className={`${Styles.subTitle} ${Styles.subTitle}--${name} tc mb6 mt0`}>{subTitle}</p>
       </div>
-      <div className={`${handles.countdown} ${handles.container}--${name} flex tc justify-center`}>
-        <div className={`${Styles.containerTicks} ${handles.container}--${name} flex justify-center items-center`}>
-          <p className={`${Styles.tick} ${handles.container}--${name}`}>{timeRemaining.hours}</p>
+      <div className={`${handles.countdown} ${handles.countdown}--${name} flex tc justify-center`}>
+        <div className={`${Styles.containerTicks} ${Styles.containerTicks}--${name} flex justify-center items-center`}>
+          <p className={`${Styles.tick} ${Styles.tick}--${name}`}>{timeRemaining.hours}</p>
         </div>
-        <div className={`${Styles.containerTicks} ${handles.container}--${name} flex justify-center items-center`}>
-          <p className={`${Styles.tick} ${handles.container}--${name}`}>{timeRemaining.minutes}</p>
+        <div className={`${Styles.containerTicks} ${Styles.containerTicks}--${name} flex justify-center items-center`}>
+          <p className={`${Styles.tick} ${Styles.tick}--${name}`}>{timeRemaining.minutes}</p>
         </div>
-        <div className={`${Styles.containerTicks} ${handles.container}--${name} flex justify-center items-center`}>
-          <p className={`${Styles.tick} ${handles.container}--${name}`}>{timeRemaining.seconds}</p>
+        <div className={`${Styles.containerTicks} ${Styles.containerTicks}--${name} flex justify-center items-center`}>
+          <p className={`${Styles.tick} ${Styles.tick}--${name}`}>{timeRemaining.seconds}</p>
         </div>
       </div>
-      <div className={`${Styles.containerSubtitles} ${handles.container}--${name} flex tc justify-center mb7`}>
-        <p className={`${Styles.tickSubtitle} ${handles.container}--${name}`}>{textHours}</p>
-        <p className={`${Styles.tickSubtitle} ${handles.container}--${name}`}>{textMinutes}</p>
-        <p className={`${Styles.tickSubtitle} ${handles.container}--${name}`}>{textSeconds}</p>
+      <div className={`${Styles.containerSubtitles} ${Styles.containerSubtitles}--${name} flex tc justify-center mb7`}>
+        <p className={`${Styles.tickSubtitle} ${Styles.tickSubtitle}--${name}`}>{textHours}</p>
+        <p className={`${Styles.tickSubtitle} ${Styles.tickSubtitle}--${name}`}>{textMinutes}</p>
+        <p className={`${Styles.tickSubtitle} ${Styles.tickSubtitle}--${name}`}>{textSeconds}</p>
       </div>
-      <div className={`${Styles.containerButton} ${handles.container}--${name} m-auto flex justify-center items-center`}>
-        <a href={linkButton} className={`${Styles.buttonLink} ${handles.container}--${name}`}>
-          <p className={`${Styles.buttonText} ${handles.container}--${name}`}>{textButton}</p>
+      <div className={`${Styles.containerButton} ${Styles.containerButton}--${name} m-auto flex justify-center items-center`}>
+        <a href={linkButton} className={`${Styles.buttonLink} ${Styles.buttonLink}--${name}`}>
+          <p className={`${Styles.buttonText} ${Styles.buttonText}--${name}`}>{textButton}</p>
         </a>
       </div>
     </div>
